@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    font-family: helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #0F1353;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#encabezado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+#logo{
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+#contenedor{
+    display: flex;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.219);
+    width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#botoncito{
+    width: 40%;
+    text-align: right;
+}
+
+#botoncito button{
+    background-color: white;
+    color: #0F1353;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.espacio{
+    margin-bottom: 15px;
+}
+
+.espacio p{
+    font-weight: bold;
+}
+
+.botones{
+    background-color: white;
+    color: #0F1353;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: center;
+    padding-left: 15px;
+}
+
+

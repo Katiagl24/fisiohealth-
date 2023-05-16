@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>  FisioHealth </title>
+  <link  rel="shortcut icon" href="logo_katia.png">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+  <div id="encabezado">
+    <img alt="" src="logo_katia2.jpg" id="logo">
+    <h1>Recomendaciones de Uso</h1>
+  </div>
+  
+  <div id="botoncito">
+    <button onclick="reiniciarPagina()" >Reiniciar</button>
+  </div>
+
+  <div id="contenedor">
+
+    <div id="preguntas">
+      <div id="pregunta1" class="espacio">
+        <p>¿Cuál es tu edad?</p> 
+        <input type="radio" name="respuesta1" value="1"> Menos de 18 años
+        <input type="radio" name="respuesta1"  value="2"> Entre 18 o 50 años
+        <input type="radio" name="respuesta1"  value="3"> Mas de 50 años
+        <button onclick="validarRespuesta1()" id="btnDisabled" class="botones">Enviar</button>
+      </div>
+  
+      <div id="pregunta2" style="display: none;" class="espacio">
+        <p>¿Te encuentras con algunas de estas condiciones médicas?</p>
+        <p>-Embarazo -Cáncer -Diabetes -Epilepsia -Portador de marcapasos -Arritmias cardiácas -Irritaciones en la piel -Inflamaciones o héridas -Implantes metálicos (Incluido el cobre) </p>
+      
+        <input type="radio" name="respuesta2" value="si"> Si
+        <input type="radio" name="respuesta2" value="no"> No
+        
+        <button onclick="validarRespuesta2()" id="btnDisabled1" class="botones">Enviar</button>
+      </div>
+  
+      <div id="pregunta3" style="display: none;" class="espacio">
+        <p>¿Realizas actividad física?</p>
+        <input type="radio" name="respuesta3" value="si"> Sí
+        <input type="radio" name="respuesta3" value="no"> No
+        <button onclick="validarRespuesta3()" id="btnDisabled2" class="botones">Enviar</button>
+      </div>
+  
+      <div id="pregunta4" style="display: none;" class="espacio">
+        <p>¿En qué zona del cuerpo siente malestar?</p>
+        <input type="radio" name="respuesta4" value="11"> Cervical
+        <input type="radio" name="respuesta4" value="12"> Biceps
+        <input type="radio" name="respuesta4" value="13"> Triceps
+        <input type="radio" name="respuesta4" value="14"> Espina Dorsal
+        <input type="radio" name="respuesta4" value="15"> Tibia Anterior
+        <input type="radio" name="respuesta4" value="16"> Rodilla
+        <input type="radio" name="respuesta4" value="17"> Pantorrilla
+        <input type="radio" name="respuesta4" value="18"> Pie
+        <input type="radio" name="respuesta4" value="19"> Perone
+        <input type="radio" name="respuesta4" value="20"> Cadera
+        <input type="radio" name="respuesta4" value="21"> Lumbar
+        <input type="radio" name="respuesta4" value="22"> Codo
+        <input type="radio" name="respuesta4" value="23"> Hombro
+        <input type="radio" name="respuesta4" value="24"> Trapecio
+        
+      
+        <button onclick="validarRespuesta4()" id="btnDisabled3" class="botones">Enviar</button>
+      </div>
+  
+      <div id="pregunta5" style="display: none;" class="espacio">
+        <p>¿Cuál es la intensidad de dolor?</p>
+        <input type="radio" name="respuesta5" value="leve"> Dolor leve
+        <input type="radio" name="respuesta5" value="moderado"> Dolor moderado
+        <input type="radio" name="respuesta5" value="severo"> Dolor severo
+        <input type="radio" name="respuesta5" value="+severo"> Dolor muy severo
+        <input type="radio" name="respuesta5" value="max"> Dolor máximo
+        
+        
+        <button onclick="validarRespuesta5()" id="btnDisabled4" class="botones">Enviar</button>
+      </div>
+  
+  <div id="pregunta6" style="display: none;" class="espacio">
+        <p>¿En qué zona del cuerpo siente malestar?</p>
+        <input type="radio" name="respuesta6" value="41"> Cervical
+        <input type="radio" name="respuesta6" value="42"> Biceps
+        <input type="radio" name="respuesta6" value="43"> Triceps
+        <input type="radio" name="respuesta6" value="44"> Espina Dorsal
+        <input type="radio" name="respuesta6" value="45"> Tibia Anterior
+        <input type="radio" name="respuesta6" value="46"> Rodilla
+        <input type="radio" name="respuesta6" value="47"> Pantorrilla
+        <input type="radio" name="respuesta6" value="48"> Pie
+        <input type="radio" name="respuesta6" value="49"> Perone
+        <input type="radio" name="respuesta6" value="50"> Cadera
+        <input type="radio" name="respuesta6" value="51"> Lumbar
+        <input type="radio" name="respuesta6" value="52"> Codo
+        <input type="radio" name="respuesta6" value="53"> Hombro
+        <input type="radio" name="respuesta6" value="54"> Trapecio
+        
+      
+        <button onclick="validarRespuesta6()" id="btnDisabled5" class="botones">Enviar</button>
+      </div>
+  
+  
+      <div id="pregunta7" style="display: none;" class="espacio">
+        <p>¿Cuál es la intensidad de dolor?</p>
+        <input type="radio" name="respuesta7" value="leve"> Dolor leve
+        <input type="radio" name="respuesta7" value="moderado"> Dolor moderado
+        <input type="radio" name="respuesta7" value="severo"> Dolor severo
+        <input type="radio" name="respuesta7" value="+severo"> Dolor muy severo
+        <input type="radio" name="respuesta7" value="max"> Dolor máximo
+        
+        
+        <button onclick="validarRespuesta7()" id="btnDisabled6" class="botones">Enviar</button>
+      </div>
+  
+  
+  
+  
+  
+  
+      <div id="resultado" style="display: none;">
+        <p id="mensaje"></p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <script>
+
+    function validarRespuesta1() {
+      var respuesta1 = document.querySelector('input[name="respuesta1"]:checked').value;
+
+      if (respuesta1 == "1") {
+        mostrarResultado("Los niños pequeños y los adolecentes, no deben utilizarlo ya que no necesitan los beneficios de la electroestimulación muscular debido a que durante los primeros años de crecimiento, por lo general son lo suficientemente activos para conseguir la mayor parte del ejercicio que es necesaria para el crecimiento saludable. Te recomendamos asistir con tu médico antes de utilizarlo ");
+        document.getElementById("btnDisabled").disabled = true;
+      } else if(respuesta1 == "2"){
+        mostrarPregunta("pregunta2");
+        document.getElementById("btnDisabled").disabled = true;
+      }
+      else{
+        mostrarResultado("Los cambios hormonales en el cuerpo después de los 50 reducen la actividad muscular y la velocidad, por lo que se debe proceder a la actividad gradualmente. Te reomendamos realizarte una examinación completa antes de comenzar una sesión de electroestimulación.");
+        document.getElementById("btnDisabled").disabled = true;
+      }
+    }
+
+    function validarRespuesta2() {
+      var respuesta2 = document.querySelector('input[name="respuesta2"]:checked').value;
+
+      if (respuesta2 == "no") {
+        mostrarPregunta("pregunta3");
+        document.getElementById("btnDisabled1").disabled = true;
+      } else {
+        mostrarResultado("El tener alguna de estas condiciones puede generar riesgos o efectos secundarios para tu salud. Te recomendamos utilizar bajo la previa supervisión y autorización de tu médico.");
+      document.getElementById("btnDisabled1").disabled = true;
+      }
+
+    }
+
+    function validarRespuesta3() {
+      var respuesta3 = document.querySelector('input[name="respuesta3"]:checked').value;
+
+      if (respuesta3 === "si") {
+    //    document.getElementById("btnDisabled").disabled = true;
+        mostrarPregunta("pregunta4");
+        document.getElementById("btnDisabled2").disabled = true;
+} else {
+  //document.getElementById("btnDisabled").disabled = true;
+mostrarPregunta("pregunta6");
+document.getElementById("btnDisabled2").disabled = true;
+}
+}function validarRespuesta4() {
+  var respuesta4 = document.querySelector('input[name="respuesta4"]:checked').value;
+
+  if (respuesta4 != "") {
+    //document.getElementById("btnDisabled").disabled = true;
+    mostrarPregunta("pregunta5");
+    document.getElementById("btnDisabled3").disabled = true;
+  } else {
+    //document.getElementById("btnDisabled").disabled = true;
+    mostrarResultado("No has indicado la zona del malestar.");
+   
+  }
+}
+//------------ Respuesta Final--------------------------------------------
+function validarRespuesta5() {
+  var respuesta5 = document.querySelector('input[name="respuesta5"]:checked').value;
+
+  if (respuesta5 == "leve" || respuesta5 == "moderado") {
+    //document.getElementById("btnDisabled").disabled = true;
+    mostrarResultado("Se recomienda utilizarlo: 10 minutos, de una a dos veces por semana");
+    document.getElementById("btnDisabled4").disabled = true;
+  } else if(respuesta5=="severo"){
+    //document.getElementById("btnDisabled").disabled = true;
+    mostrarResultado("Se recomienda utilizarlo: 15 minutos, de una a dos veces por semana");
+    document.getElementById("btnDisabled4").disabled = true;
+  } else{
+    //document.getElementById("btnDisabled").disabled = true;
+    mostrarResultado("Se recomienda utilizarlo: 20 minutos, de una a dos veces por semana");
+    document.getElementById("btnDisabled4").disabled = true;
+  }
+}
+//-------------------------------------------------------------------------------------------------
+function validarRespuesta6() {
+  var respuesta6 = document.querySelector('input[name="respuesta6"]:checked').value;
+
+  if (respuesta6 != "") {
+    //document.getElementById("btnDisabled").disabled = true;
+    mostrarPregunta("pregunta7");
+    document.getElementById("btnDisabled5").disabled = true;
+  } else {
+    //document.getElementById("btnDisabled").disabled = true;
+    mostrarResultado("No has indicado la zona del malestar.");
+    //document.getElementById("btnDisabled").disabled = true;
+  }
+}
+//------------ Respuesta Final--------------------------------------------
+function validarRespuesta7() {
+  var respuesta7 = document.querySelector('input[name="respuesta7"]:checked').value;
+
+  if (respuesta7 == "leve" || respuesta7 == "moderado") {
+    //document.getElementById("btnDisabled6").disabled = true;
+    mostrarResultado("Se recomienda utilizarlo: 10 minutos, una vez por semana");
+    document.getElementById("btnDisabled6").disabled = true;
+  } else if(respuesta7=="severo"){
+    //document.getElementById("btnDisabled6").disabled = true;
+    mostrarResultado("Se recomienda utilizarlo: 15 minutos, una vez  por semana");
+    document.getElementById("btnDisabled6").disabled = true;
+  } else{
+    //document.getElementById("btnDisabled6").disabled = true;
+    mostrarResultado("Se recomienda utilizarlo: 20 minutos, una vez por semana");
+    document.getElementById("btnDisabled6").disabled = true;
+  }
+}
+//-------------------------------------------------------------------------------------------------
+
+function mostrarPregunta(pregunta) {
+  document.getElementById(pregunta).style.display = "block";
+}
+
+function mostrarResultado(mensaje) {
+  var divResultado = document.getElementById("resultado");
+  var mensajeElemento = document.getElementById("mensaje");
+  mensajeElemento.textContent = mensaje;
+  divResultado.style.display = "block";
+}
+
+function reiniciarPagina() {
+      location.reload(); // Recarga la página actual
+    }
+
+ </script>
+</body>
+</html>
